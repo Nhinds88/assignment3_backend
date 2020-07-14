@@ -9,11 +9,13 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ConfigReceiver {
+
     @Bean
     public FanoutExchange fanout() {
         return new FanoutExchange("city-reservation");
     }
 
+    // created the queue for the reservation
     @Bean
     public Queue queue1() {
         return new Queue("city-reservation-q1");
