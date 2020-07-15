@@ -13,6 +13,7 @@ public class ReservationEventHandler {
     @RabbitHandler
     public void receive(String in) {
         System.out.println(in);
+        // logs the data received
         log.info(" [ReservationEventHandler] Received '" + in + "'");
     }
 }
